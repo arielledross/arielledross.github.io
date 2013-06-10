@@ -1,0 +1,160 @@
+/** Stately setup
+*************************************/
+@font-face {
+  font-family: 'stately-webfont';
+  src: url("../font/stately-webfont.eot");
+  src: url("../font/stately-webfont.eot?#iefix") format("embedded-opentype"), url("../font/stately-webfont.woff") format("woff"), url("../font/stately-webfont.ttf") format("truetype"), url("../font/stately-webfont.svg#testfontRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.stately {
+  font: normal normal 600px/100% "stately-webfont";
+  font-size-adjust: none;
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga=1";
+  -ms-font-feature-settings: "liga" 1;
+  -ms-font-feature-settings: "liga", "dlig";
+  overflow: hidden;
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.stately li {
+  float: left;
+  margin: -20% 0 0 -100%;
+  position: relative;
+  left: 101%;
+  width: 100%;
+  cursor: default;
+  -webkit-transition: all 1s ease-in;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/** Style customizations
+*************************************/
+.stately {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 1px solid #dddddd;
+}
+
+#intrideans {
+  color: #b0b0b0;
+}
+#intrideans .ca,
+#intrideans .co,
+#intrideans .dc,
+#intrideans .fl,
+#intrideans .ks,
+#intrideans .md,
+#intrideans .mn,
+#intrideans .mi,
+#intrideans .nj,
+#intrideans .ny,
+#intrideans .oh,
+#intrideans .va,
+#intrideans .wa,
+#intrideans .wy {
+  color: #a3d07e;
+}
+
+#election {
+  color: #ff7474;
+}
+#election .id,
+#election .wy,
+#election .mt,
+#election .nm,
+#election .ok,
+#election .ia,
+#election .ar,
+#election .ne{
+  color: blue;
+}
+#election .ak,
+#election .mo,
+#election .ks,
+#election .ky,
+#election .ms,
+#election .hi,
+#election .tx,
+#election .wv,
+#election .nv,
+#election .oh{
+  color: purple;
+}
+#election .az,
+#election .al,
+#election .co,
+#election .wi,
+#election .nd,
+#election .in,
+#election .nc,
+#election .me,
+#election .sc,
+#election .mi,
+#election .mn,
+#election .ga,
+#election .sd,
+#election .vt,
+{color: white;}
+#election .il,
+#election .la,
+#election .tn,
+#election .or,
+#election .ut,
+#election .ca,
+#election .fl,
+#election .nh,
+#election .wa,
+#election .va,
+#election .pa,
+#election .ct,
+#election .ny,
+#election .dc,
+#election .md,
+#election .de,
+#election .ma,
+#election .nj,
+#election .ri,
+
+#presidents {
+  color: #b0b0b0;
+}
+#presidents .va,
+#presidents .oh,
+#presidents .ma,
+#presidents .ny,
+#presidents .nc,
+#presidents .tx,
+#presidents .vt,
+#presidents .ak,
+#presidents .ca,
+#presidents .ga,
+#presidents .hi,
+#presidents .il,
+#presidents .ia,
+#presidents .ky,
+#presidents .mi,
+#presidents .ne,
+#presidents .nj,
+#presidents .pa,
+#presidents .sc {
+  color: #ff8b3e;
+}
+
