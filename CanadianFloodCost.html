@@ -23,6 +23,19 @@ body {
   display: none;
 }
 
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+}
+
 </style>
 <body>
 <h1>Southern Alberta just experienced the most expensive flood of the last 40 years.</h1>
@@ -30,6 +43,8 @@ body {
     <h3>The projected total cost of 2013 Southern Alberta floods is estimated to be somewhere between three and five billion dollars. This is more than the cost all the floods that took place during the 1990s, the most expensive decade of the last 40 years.</h3>
 
     <h3><u>Flood damage cost by Province or Territory since 1970</u></h3>
+
+
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -63,6 +78,12 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+var formatTime = d3.time.format("%e %B");
+
+var div = d3.select("body").append("div")   
+    .attr("class", "tooltip")               
+    .style("opacity", 0);
+
 d3.csv("DecadesFlood.csv", function(error, data) {
   var ageNames = d3.keys(data[0]).filter(function(key) { return key !== "Province"; });
 
@@ -73,6 +94,8 @@ d3.csv("DecadesFlood.csv", function(error, data) {
   x0.domain(data.map(function(d) { return d.Province; }));
   x1.domain(ageNames).rangeRoundBands([0, x0.rangeBand()]);
   y.domain([0, d3.max(data, function(d) { return d3.max(d.ages, function(d) { return d.value; }); })]);
+
+
 
   svg.append("g")
       .attr("class", "x axis")
@@ -124,5 +147,7 @@ d3.csv("DecadesFlood.csv", function(error, data) {
       .text(function(d) { return d; });
 
 });
+
+
 
 </script>
